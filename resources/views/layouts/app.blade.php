@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Money Money</title>
+    <title>EasyBilan</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -53,14 +53,13 @@
                         <li><a href="{{ route('devis.create') }}" class="text-gray-600 hover:text-gray-900">Devis</a></li>
                      </ul>
 
-                    <!-- LIENS À DROITE (DUPLIQUÉS) -->
+                    <!-- LIENS À DROITE -->
                     <ul class="flex gap-6 text-sm">
                         <li><a href="{{ route('clients.index') }}" class="text-gray-600 hover:text-gray-900">Clients</a></li>
                         <li><a href="{{ route('chantiers.index') }}" class="text-gray-600 hover:text-gray-900">Chantiers</a></li>
                         <li><a href="{{ route('factures.index') }}" class="text-gray-600 hover:text-gray-900">Factures</a></li>
                         <li><a href="{{ route('reglements.index') }}" class="text-gray-600 hover:text-gray-900">Règlements</a></li>
                     </ul>
-
                 </nav>
             </div>
         </header>
@@ -74,7 +73,7 @@
 
         <footer class="bg-white border-t border-gray-200 py-4 mt-8">
             <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500">
-                Application de devis & comptabilité — Par Killias bouillet
+                EasyBilan — Application de devis & comptabilité — Par Killias bouillet
             </div>
         </footer>
 
