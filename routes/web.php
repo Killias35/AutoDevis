@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ExcelController;
+
+use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\ChantiersController;
+use App\Http\Controllers\FacturesController;
+use App\Http\Controllers\ReglementsController;
+
+use App\Http\Controllers\DevisController;
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/clients', [ClientsController::class, 'index'])->name('clients.index');
+Route::get('/chantiers', [ChantiersController::class, 'index'])->name('chantiers.index');
+Route::get('/factures', [FacturesController::class, 'index'])->name('factures.index');
+Route::get('/reglements', [ReglementsController::class, 'index'])->name('reglements.index');
+
+
+Route::get('/db/import', [ExcelController::class, 'show'])->name('excel.show');
+Route::post('/db/import/debug', [ExcelController::class, 'debug'])->name('excel.debug');
+Route::post('/db/import', [ExcelController::class, 'store'])->name('excel.upload');
+
+Route::get('/devis', [DevisController::class, 'create'])->name('devis.create');
+Route::post('/devis/upload', [DevisController::class, 'upload'])->name('devis.upload');
+
+Route::get('/devis/download', [DevisController::class, 'downloadPdf'])->name('devis.download');
